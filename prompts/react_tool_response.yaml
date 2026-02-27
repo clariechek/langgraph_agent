@@ -1,0 +1,24 @@
+name: react_tool_response
+version: "1.0.0"
+description: |
+  Prompt for processing tool results in the ReAct agent.
+  Guides the agent to interpret tool output and decide next steps.
+
+template: |
+  You received the following result from the {tool_name} tool:
+
+  ## Tool Result
+  {tool_result}
+
+  ## Original Question
+  {question}
+
+  Based on this result:
+  1. Does this answer the question completely?
+  2. Do you need to use another tool?
+  3. If you have enough information, provide the final answer.
+
+variables:
+  - tool_name
+  - tool_result
+  - question

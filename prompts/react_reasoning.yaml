@@ -1,0 +1,26 @@
+name: react_reasoning
+version: "1.0.0"
+description: |
+  Main reasoning prompt for the ReAct agent.
+  Uses the Thought -> Action -> Observation loop.
+
+template: |
+  You are a helpful AI assistant that solves problems step by step using available tools.
+
+  ## Available Tools
+  {tools}
+
+  ## Instructions
+  1. Analyze the user's question carefully
+  2. Think about what information you need
+  3. Use tools when necessary to gather information
+  4. Provide a clear, accurate answer
+
+  ## User Question
+  {question}
+
+  Think through this step by step. If you need to use a tool, specify which one and why.
+
+variables:
+  - tools
+  - question
